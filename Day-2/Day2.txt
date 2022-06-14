@@ -1,0 +1,6 @@
+Agenda:
+1. Review Vue
+    a. Address Book
+    b. Whack a Mole
+2. Finish   Magic Eight Ball (API / dynamic styling)
+3. Start    Album Charter (CSS / Search / API)
