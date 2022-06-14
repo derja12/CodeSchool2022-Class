@@ -1,5 +1,5 @@
 Agenda:
-1. Review Vue
+1. Review Vue (https://github.com/derja12/CodeSchool2022-Class/Day-2/Day-1-Review)
     a. Address Book
     b. Whack a Mole
 2. Finish   Magic Eight Ball (API / dynamic styling)
