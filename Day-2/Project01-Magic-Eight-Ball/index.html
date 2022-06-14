@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Magic Eight Ball</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app" v-cloak>
+        <div id="eight-ball">
+            <div id="message-area">
+                <div id="message">{{ message }}</div>
+            </div>
+        </div>
+        <br><br>
+        <div id="question-area">
+            {{ prompt }} <br>
+            <input v-model="question" v-on:keydown.enter="askQuestion()"> <br>
+            <button v-show="isValidQuestion()" v-on:click="askQuestion()">Ask Question</button>
+            <div v-show="question.length > 0 && !isValidQuestion()">Questions usually end with a ?</div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

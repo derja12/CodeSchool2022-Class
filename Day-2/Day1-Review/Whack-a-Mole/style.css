@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+    background-color: wheat;
+}
+
+body #app .row {
+    display: block;
+
+    margin: 1rem auto;
+    width: fit-content;
+}
+
+body #app .row .column {
+    display: inline-block;
+
+    background-color: goldenrod;
+    border-radius: 5%;
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    margin: 0rem 1rem;
+}
+
+body #app .row .column .mole {
+    width: inherit;
+    height: inherit;
+
+    background-color: saddlebrown;
+    border-radius: 100%;
+}

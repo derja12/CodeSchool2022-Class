@@ -1,0 +1,41 @@
+[v-cloak] {
+	display: none;
+}
+
+body {
+    background-color: #444;
+}
+
+body #app #eight-ball {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    border-radius: 100%;
+    background-color: black;
+}
+
+body #app #eight-ball #message-area {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin-top: 175px;
+    background-color: white;
+    margin-left: 175px;
+    border-radius: 100%;
+    text-align: center;
+}
+
+body #app #eight-ball #message-area #message {
+    margin-top: 50px;
+}
+
+
+
+body #app #question-area {
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    padding: 1rem;
+    text-align: center;
+}
