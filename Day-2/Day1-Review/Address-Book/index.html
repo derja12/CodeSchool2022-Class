@@ -8,11 +8,20 @@
     <div id="app">
         <h1>Vue Address Book</h1>
         <!-- Inputs for name and address -->
-        
+        <input placeholder="Enter Name" v-model="nameInput">
+        <input placeholder="Enter Address" v-model="addressInput">
         <!-- Button to record new addresses -->
+        <button v-on:click="recordAddress" 
+                v-bind:disabled="nameInput == '' || addressInput == ''">Record Address</button>
 
         <!-- display list of addresses -->
+        <div v-for="(address, index) in addressList">
+            <b v-on:mouseover="hoverIndex = index">{{ address.name }}</b> 
+            <i v-show="hoverIndex == index">{{ address.address }}</i>
 
+            <!-- Delete Address -->
+            <button v-on:click="deleteAddress(index)">X</button>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="app.js"></script>
