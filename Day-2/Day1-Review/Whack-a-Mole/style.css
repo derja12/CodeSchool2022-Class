@@ -22,7 +22,7 @@ body #app .row .column {
 
 body #app .row .column .mole {
     width: inherit;
-    height: inherit;
+    aspect-ratio: 1 / 1;
 
     background-color: saddlebrown;
     border-radius: 100%;

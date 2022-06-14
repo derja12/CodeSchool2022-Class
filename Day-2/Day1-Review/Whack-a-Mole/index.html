@@ -8,13 +8,15 @@
     <div id="app">
         <h1>Whack a Mole</h1>
         <!-- loop over rows -->
-        <div class="row">
+        <div class="row" v-for="row in rows">
             <!-- loop over columns -->
-            <div class="column">
+            <div class="column" v-for="column in columns">
                 <!-- Mole -->
                 <!-- 1. shown only if mole position matches the row/column index -->
                 <!-- 2. call hitMole when clicked -->
-                <div class="mole">
+                <div class="mole"
+                     v-show="moleRow == row && moleColumn == column"
+                     v-on:click="hitMole()">
                 </div>
             </div>
         </div>
