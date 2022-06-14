@@ -25,3 +25,11 @@ var app = new Vue({
         // Call Recursive function to start
     }
 });
+
+
+
+// Extra Challenges:
+// - Restart/Play button - begins the game
+// - Stop the mole after a certain total (10, 20, etc.)
+// - Keep a high score, separate from the current game's score
+// - Have multiple Moles
