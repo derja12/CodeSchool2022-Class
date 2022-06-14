@@ -5,14 +5,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="app" v-cloak>
+    <div id="app" v-bind:style="{ backgroundImage : gradient }" v-cloak>
         <div id="eight-ball">
             <div id="message-area">
-                <div id="message">{{ message }}</div>
+                <div id="message" v-bind:style="{ color : messageColor }">{{ message }}</div>
             </div>
         </div>
         <br><br>
-        <div id="question-area">
+        <div v-show="answerReady" id="question-area">
             {{ prompt }} <br>
             <input v-model="question" v-on:keydown.enter="askQuestion()"> <br>
             <button v-show="isValidQuestion()" v-on:click="askQuestion()">Ask Question</button>

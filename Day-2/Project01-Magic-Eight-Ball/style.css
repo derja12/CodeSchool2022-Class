@@ -27,6 +27,7 @@ body #app #eight-ball #message-area {
 
 body #app #eight-ball #message-area #message {
     margin-top: 50px;
+    transition: 1s;
 }
 
 
