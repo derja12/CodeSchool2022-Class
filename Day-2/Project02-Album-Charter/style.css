@@ -1,0 +1,94 @@
+[v-cloak] {
+	display: none;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html, body, main {
+    width: 100%;
+    height: 100%;
+}
+
+body #app {
+    display: grid;
+    grid-template-columns: 3fr 1fr 7fr;
+
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+/* ========================= LEFT COLUMN ========================= */
+
+body #app #left-column {
+    grid-row: 1 / 1;
+    grid-column: 1 / 2;
+
+    padding: .25rem;
+    border: 1px solid black;
+    text-align: center;
+}
+
+body #app #left-column h1 {
+    padding: 1rem;
+}
+
+body #app #left-column #search-album-area {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body #app #left-column #search-album-area img {
+    width: 33.33333%;
+    aspect-ratio: 1 / 1;
+}
+
+/* body #app #left-column h1 {
+} */
+
+body #app #middle-column {
+    grid-row: 1 / 1;
+    grid-column: 2 / 3;
+}
+
+body #app #right-column {
+    grid-row: 1 / 1;
+    grid-column: 3 / 4;
+ 
+    border: 1px solid black;
+}
+
+body #app #right-column #picked-album-area {
+    height: 700px;
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    background-color: #666;
+}
+
+body #app #right-column #picked-album-area .picked-album-slot {
+    border: 1px solid black;
+}
+
+body #app #right-column #picked-album-area .top-10 {
+    width: 20%;
+    aspect-ratio: 1 / 1;
+    background-color: blueviolet;
+}
+
+body #app #right-column #picked-album-area .top-22 {
+    width: calc( 100% / 6 );
+    aspect-ratio: 1 / 1;
+    background-color: aqua;
+}
+
+body #app #right-column #picked-album-area .top-42 {
+    width: calc( 100% / 10 );
+    aspect-ratio: 1 / 1;
+    background-color: red;
+}
