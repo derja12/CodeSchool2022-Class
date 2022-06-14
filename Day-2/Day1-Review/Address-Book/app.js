@@ -11,4 +11,11 @@ var app = new Vue({
             
         }
     }
-})
+});
+
+
+// Extra Challenges:
+// - Delete button for each address - removes the individual address
+// - Only show the address if you hover over the person's name
+// - Disable the button if the inputs are blank
+// - Edit button - lets you edit already recorded addresses
