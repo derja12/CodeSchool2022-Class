@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vue Basics</title>
+</head>
+<body>
+    <div id="app">
+        <div 
+            v-for="(item,index) in items"
+            v-on:click="changeColor(item)"
+            v-bind:style="{ backgroundColor : item.color, color : globalColor }">
+            {{ item.text }} {{ index }}
+            <!-- <div v-if="item.show">{{ hello }}</div> -->
+            <!-- <div v-else>Goodbye Vue!</div> -->
+            <!-- <div v-on:mouseover="toggleTextandAddA_GLOBAL" v-show="showText">V-Show</div> -->
+            <!-- <button v-on:click="toggleTextandAddA(item)">Toggle Text</button> -->
+            <br><br>
+        </div>
+
+        <!-- <div v-for="string in strings">
+            {{ string }}
+        </div> -->
+
+        <!-- <div v-for="i in 10">{{ listA[i-1] }}</div> -->
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
