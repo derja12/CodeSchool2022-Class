@@ -27,7 +27,9 @@ body #app #left-column {
     grid-row: 1 / 1;
     grid-column: 1 / 2;
 
-    padding: .25rem;
+    max-height: initial;
+    overflow-y: auto;
+
     border: 1px solid black;
     text-align: center;
 }
@@ -39,6 +41,7 @@ body #app #left-column h1 {
 body #app #left-column #search-album-area {
     display: flex;
     flex-wrap: wrap;
+
 }
 
 body #app #left-column #search-album-area img {
@@ -57,12 +60,15 @@ body #app #middle-column {
 body #app #right-column {
     grid-row: 1 / 1;
     grid-column: 3 / 4;
+
+    max-height: initial;
+    overflow-y: hidden;
  
     border: 1px solid black;
 }
 
 body #app #right-column #picked-album-area {
-    height: 700px;
+    height: 100%;
     aspect-ratio: 1 / 1;
 
     display: flex;
