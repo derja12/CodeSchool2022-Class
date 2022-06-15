@@ -22,8 +22,25 @@
                      class="picked-album-slot" 
                      v-bind:class="{ 'top-10' : index < 10, 
                                 'top-22' : index >= 10 && index < 22,  
-                                'top-42' : index >= 22 && index < 42 }"></div>
+                                'top-42' : index >= 22 && index < 42 }"
+                     @mouseup="dropAlbum(index)"
+                                >
+                                <!-- @mouseover="hoverAlbum(index)" -->
+                    <img class="picked-album" 
+                         draggable="false"
+                         v-if="index < pickedAlbumList.length" 
+                         @mousedown="pickupAlbum(index)"
+                         :src="pickedAlbumList[index].strAlbumThumb"
+                         v-on:click.ctrl="removeAlbum(index)">
+                                
+                </div>
             </div>
+            <ol>
+                <li v-for="album in pickedAlbumList">
+                    {{ album.strArtist }} - {{ album.strAlbum }}
+                </li>
+
+            </ol>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>

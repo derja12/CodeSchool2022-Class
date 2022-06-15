@@ -6,18 +6,30 @@
 <body>
     <div id="app">
         <!-- number input, button to add die -->
+        <input v-model="sidesInput">
+        <button @click="addDie()">Add Die</button>
 
         <div id="die-area">
             <!-- divs for each die (CLASS: die) -->
             <!--    - when clicked, roll die -->
             <!--    - when ctrl+clicked, delete die (hint: click.ctrl) -->
+            <div class="die" 
+                 v-for="(die, index) in dice"
+                 @click="rollDie(index)"
+                 @click.ctrl="deleteDie(index)">
                 
                 <!-- display sides - (no css class) --> 
-                
+                <div>{{ die.sides }}</div>
+
                 <!-- display the current value (CLASS: current-value) -->
+                <div class="current-value">{{ die.value }}</div>
+
+            </div>                
         </div>
 
         <!-- button to roll all dice -->
+        <button @click="rollAllDice()">Roll All Dice</button>
+        
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="app.js"></script>

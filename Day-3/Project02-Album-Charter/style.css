@@ -65,6 +65,7 @@ body #app #right-column {
     overflow-y: hidden;
  
     border: 1px solid black;
+    display: flex;
 }
 
 body #app #right-column #picked-album-area {
@@ -74,27 +75,40 @@ body #app #right-column #picked-album-area {
     display: flex;
     flex-wrap: wrap;
 
-    background-color: #666;
+    /* background-color: #666; */
 }
 
 body #app #right-column #picked-album-area .picked-album-slot {
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    background-color: rgb(200, 200, 200);
+    aspect-ratio: 1 / 1;
+} 
+
+body #app #right-column #picked-album-area .picked-album-slot .picked-album {
+    height: 100%;
+    width: 100%;
+    /* aspect-ratio: 1 / 1; */
+} .picked-album:hover {
+    border: 1px solid red;
 }
 
 body #app #right-column #picked-album-area .top-10 {
-    width: 20%;
+    width: 19%;
+    margin: .5%;
     aspect-ratio: 1 / 1;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
 }
 
 body #app #right-column #picked-album-area .top-22 {
-    width: calc( 100% / 6 );
+    width: calc( 90% / 6 );
+    margin: calc( 10% / 12 );
     aspect-ratio: 1 / 1;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 body #app #right-column #picked-album-area .top-42 {
-    width: calc( 100% / 10 );
+    width: calc( 90% / 10 );
+    margin: calc( 10% / 20 );
     aspect-ratio: 1 / 1;
-    background-color: red;
+    /* background-color: red; */
 }
