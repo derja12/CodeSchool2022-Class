@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Album Charter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app" v-cloak>
+        <div id="left-column">
+            <h1>Album Charter</h1>
+            <input placeholder="Artist" v-model="artistInput">
+            <button v-on:click="searchArtist">Search Artist</button>
+            <br><br>
+            <div id="search-album-area">
+                <img v-for="(album, index) in searchAlbumList" v-on:click="addAlbum(index)" v-bind:src="album.strAlbumThumb">
+            </div>
+        </div>
+        <div id="middle-column"></div>
+        <div id="right-column">
+            <div id="picked-album-area">
+                <div v-for="(i, index) in 42" 
+                     class="picked-album-slot" 
+                     v-bind:class="{ 'top-10' : index < 10, 
+                                'top-22' : index >= 10 && index < 22,  
+                                'top-42' : index >= 22 && index < 42 }"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    background-color: blanchedalmond;
+    text-align: center;
+}
+
+body #app .wall {
+    position: absolute;
+    background-color: tan;
+}
+
+body #app #start-button {
+    position: absolute;
+    bottom: 50vh;
+    left: 5vw;
+}
+
+body #app #finish-button {
+    position: absolute;
+    bottom: 50vh;
+    left: 85vw;
+}
+
+body #app #win-message {
+    margin-top: 45vh;
+    color: greenyellow;
+}
+
+body #app #lose-message {
+    margin-top: 45vh;
+    color: maroon;
+}
+
+body #app #restart-button {
+    margin-top: 1rem;
+}

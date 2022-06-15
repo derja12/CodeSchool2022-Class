@@ -1,0 +1,6 @@
+Agenda:
+1. Warmups
+    a. Dice App
+    b. Mouse Maze
+2. Album Charter (Display Picked Albums/Names, Delete/Reorder)
+3. Introduce Todo (?)

@@ -1,0 +1,42 @@
+body {
+    box-sizing: border-box;
+    background-color: slategray;
+    text-align: center;
+    margin: 0;
+}
+
+body #app {
+    width: 100%;
+    height: fit-content;
+    padding-top: 1rem;
+}
+
+body #app input {
+    width: 3rem;
+}
+
+body #app #die-area {
+    margin: 1rem 3rem;
+    width: calc(100vw - 6rem);
+    min-height: calc((100vw - 6rem) / 10);
+
+    background-color: white;
+    border: 2px gray solid;
+
+    display: flex;
+    flex-wrap: wrap;
+} body #app #die-area .die {
+    width: 9%;
+    aspect-ratio: 1 / 1;
+
+    margin: .5%;
+    border-radius: 3px;
+    background-color: #661633;
+    color: #fff;
+
+    font-size: 1rem;
+    text-align: center;
+} 
+body #app #die-area .die .current-value {
+    font-size: 3rem;
+}
