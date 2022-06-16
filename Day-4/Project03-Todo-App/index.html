@@ -2,15 +2,52 @@
 <html>
 <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <title>Todo App</title>
 </head>
 <body>
     <div id="app">
         <h1>Todo App</h1>
         <div id="input-area">
-            
+            <!-- Model out each input -->
+            Name: <input placeholder="Name" v-model="nameInput"><br>
+            Description: <input placeholder="Description" v-model="descInput"><br>
+            Done: <input type="checkbox" v-model="doneInput"><br>
+            Date: <input type="date" v-model="dateInput"><br><br>
+            Tags: <br>
+            <div class="tag-area" v-for="tag in usableTags"><input type="checkbox" v-model="tagsInput[tag]"> {{ tag }} </div>
+            <br><br>
+            <button class="green-button" v-on:click="addTodo()">Add Todo</button>
         </div>
         <div id="list-area">
+            <div class="todo" v-for="(todo, index) in todos" v-bind:class="{ 'new-todo' : todo._id == newTodoId }">
+                <!-- Name stuff -->
+                <span class="todo-name" v-bind:class="{ strikethrough : todo.done }" v-if="editingIndex != index">{{ todo.name }}</span>
+                <input class="todo-name" placeholder="Name" v-model="todo.name" v-if="editingIndex == index">
+                <br>
+
+                <!-- Description stuff -->
+                Description: <span v-if="editingIndex != index">{{ todo.description }}</span>
+                <input placeholder="Description" v-model="todo.description" v-if="editingIndex == index">
+                <br>
+
+                <!-- Done stuff -->
+                Done: <span v-if="editingIndex != index">{{ todo.done }}</span>
+                <input v-if="editingIndex == index" type="check" v-model="todo.done">
+                <br>
+
+                <!-- Deadline stuff -->
+                Deadline: <span v-if="editingIndex != index">{{ todo.deadline }}</span>
+                <input v-if="editingIndex == index" type="date" v-model="todo.deadline">
+                <br>
+
+                <!-- Tag stuff -->
+                Tags: {{ todo.tags }}<br>
+                <button class="green-button" v-if="editingIndex != index" v-on:click="editTodo(index)">Edit Todo</button>
+                <button class="red-button" v-if="editingIndex == index" v-on:click="editTodo(-1)">Submit</button>
+            </div>
             
         </div>
     </div>
