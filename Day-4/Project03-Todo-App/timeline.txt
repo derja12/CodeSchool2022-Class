@@ -1,4 +1,5 @@
 OVERVIEW TIMELINE:
+0.  Get custom fonts from google
 1.  Display todo list from the server (fetch: default / GET)
 2.  Create inputs so we can add new todos (local-only)
 3.  Add new todos through the server instead of locally (fetch: POST)
