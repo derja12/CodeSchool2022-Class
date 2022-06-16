@@ -1,0 +1,62 @@
+body {
+    margin: 0rem 15vw;
+    text-align: center;
+}
+
+body #app {
+    padding: 3rem 0rem;
+}
+
+/* =============== Inputs Area =============== */
+
+body #app #inputs-area {
+    padding: 1rem;
+    background-color: rgb(139, 183, 226);
+    border: 3px solid rgba(0, 0, 0, 0.226);
+    border-radius: 3px 3px 0px 0px;
+}
+
+body #app #inputs-area input {
+    width: 2.5rem;
+}
+
+body #app #inputs-area #color-preview {
+    display: inline-block;
+    width: 15rem;
+    aspect-ratio: 1 / 1;
+
+    border: 3px solid rgba(0, 0, 0, 0.226);
+    border-radius: 3px;
+}
+
+/* =============== Inputs Area =============== */
+
+body #app #palette-area {
+    padding: 1rem;
+    background-color: rgb(183, 206, 228);
+    border: 3px solid rgba(0, 0, 0, 0.226);
+    border-radius: 0px 0px 3px 3px;
+    border-top: none;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body #app #palette-area div {
+    text-align: center;
+    margin: 1rem;
+}
+
+body #app #palette-area div .palette-color {
+    display: inline-block;
+
+    width: 3rem;
+    aspect-ratio: 1 / 1;
+
+    border: 2px solid rgba(0, 0, 0, 0.226);
+    border-radius: 100%;
+}
+
+body #app #palette-area div .palette-color-string {
+    margin: 0rem 1rem;
+}

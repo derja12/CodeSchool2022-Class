@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fresca&display=swap" rel="stylesheet">
+    <title>Todo App</title>
+</head>
+<body>
+    <div v-cloak id="app">
+        <h1>Todo App</h1>
+        <div id="input-area">
+            Name: <input type="text" v-model="nameInput"><br><br>
+            Description: <input type="text" v-model="descInput"><br><br>
+            Deadline: <input type="date" v-model="deadlineInput"><br><br>
+            Tags: <div class="tag-area" v-for="tag in tags">
+                <input class="tag-input" type="checkbox" v-model="tag.selected"> {{tag.name}}
+            </div><br><br>
+            <button class="green-button" @click="createNewTodo">Create New Todo</button>
+        </div>
+        <div id="list-area">
+            <div class="todo" v-for="(todo, index) in todo_data">
+                <!-- Buttons -->
+                <div class="button-area">
+                    <button class="green-button" v-on:click="editTodo(index)" v-show="editingTodo != index">Edit Todo</button>
+                    <button class="red-button" v-on:click="editingTodo = -1" v-show="editingTodo == index">Cancel</button>
+                    <button class="green-button" v-on:click="updateTodo(index)" v-show="editingTodo == index">Update</button>
+                    <button class="red-button" v-on:click="deleteTodo(index)" v-show="editingTodo == index">Delete</button>
+                </div>
+
+                <!-- Name -->
+                <div class="todo-name" v-show="editingTodo != index">{{todo.name}}</div>
+                <input class="todo-name" v-model="todo.name" v-show="editingTodo == index">
+                
+                <!-- Deadline -->
+                <div class="todo-deadline" v-show="editingTodo != index">{{ new Date(todo.deadline + "MDT").toDateString() }}</div>
+                <input class="todo-deadline" v-model="todo.deadline" type="date" v-show="editingTodo == index">
+                <!-- <div id="todo-deadline">{{ displayDeadline(index) }}</div> -------- USING VUE METHOD -->
+                
+                <!-- Description -->
+                <div class="todo-desc" v-show="editingTodo != index">{{todo.description}}</div>
+                <textarea class="todo-desc" type="text" v-model="todo.description" v-show="editingTodo == index"></textarea>
+
+                <!-- Tags -->
+                <div v-show="editingTodo != index">
+                    <div v-show="editingTodo != index" class="todo-tags" v-for="(tag, index) in todo.tags">
+                        <i>{{ tag }}<p v-show="index != todo.tags.length - 1">, </p></i>
+                    </div>
+                </div>
+                <div v-show="editingTodo == index" class="tag-area" v-for="tag in editingTags">
+                    <input type="checkbox" v-model="tag.selected"> {{tag.name}}
+                </div>
+
+                <!-- Done -->
+                <div v-show="editingTodo == index">Mark As Finished? <input type="checkbox" v-model="todo.done"></div>
+                <div v-show="todo.done && editingTodo != index"><i>Completed</i></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

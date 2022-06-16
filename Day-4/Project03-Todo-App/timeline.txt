@@ -1,0 +1,21 @@
+OVERVIEW TIMELINE:
+1.  Display todo list from the server (fetch: default / GET)
+2.  Create inputs so we can add new todos (local-only)
+3.  Add new todos through the server instead of locally (fetch: POST)
+4.  Edit individual todos locally
+5.  Send edited todos to the server (fetch: PUT)
+6.  Delete individual todos on the server (fetch: DELETE)
+7.  Add Tags
+...
+
+
+Detailed Instructions:
+
+1. Display todo list from the server
+====================================
+    a. Start off with Postman
+    b. ...
+
+2.  Create inputs so we can add new todos (local-only)
+=======================================================
+    a. ...

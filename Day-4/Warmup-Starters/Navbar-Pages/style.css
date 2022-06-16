@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+
+body #app {
+    width: 50vw;
+    margin: 2rem auto;
+}
+
+body #app nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+body #app nav .nav-div {
+    background-color: rgb(74, 164, 209);
+    font-size: 2rem;
+    padding: 1rem;
+    transition: .2s;
+} body #app nav .nav-div:hover {
+    background-color: rgb(85, 183, 233);
+    cursor: pointer;
+}
+
+body #app .page {
+    text-align: justify;
+    background-color: rgb(88, 151, 80);
+    padding: 2rem;
+}
+
+body #app .page figure {
+    height: 10rem;
+    text-align: center;
+    font-size: small;
+}
+
+body #app .page figure img {
+    margin: 0rem auto;
+    display: block;
+    height: inherit;
+}
+
+body #app .page-number {
+    text-align: center;
+    background-color: rgb(88, 151, 80);
+    padding-bottom: 2rem;
+}

@@ -1,0 +1,6 @@
+Agenda:
+1. Warmups
+    a. Navbar Pages
+    b. Color Palette
+2. Start Todo App
+    a. go over timeline

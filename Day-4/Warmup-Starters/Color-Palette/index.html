@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RGB Color Palette</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="inputs-area">
+            <h1>RGB Color Palette</h1>
+
+            <!-- 1. Color Inputs -->
+            <!-- Red Input - modeled with a variable    (extra attributes: type='number' max='255' min='0') -->
+            Red: 
+            <!-- Green Input - repeat previous with new variable -->
+            Green: 
+            <!-- Blue Input -  "                               " -->
+            Blue: 
+
+            <br><br>
+
+            <!-- 3. Add Button -->
+            <!-- Add Color Button - adds the color when clicked    (extra attributes: none) -->
+
+
+            <br><br>
+
+            <!-- 2. Color Preview -->
+            <!-- Preview Div - displays current rgb combination 
+                              using computed variable rgbString    (extra attributes: id='color-preview') -->
+
+        </div>
+        <div id="palette-area">
+
+            <!-- 4. Color Palette -->
+            <!-- Individual Colors - loop over each colorString in your color array    (extra attributes: none) -->
+
+                <!-- a. Color Display - bind the backgroundColor style to the 
+                                        colorString from your loop    (extra attributes: class='palette-color') -->
+
+                <!-- b. Color String - use inline double curly braces to display the colorString    (extra attributes: class='palette-color-string') -->
+                
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
