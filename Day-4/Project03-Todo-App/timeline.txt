@@ -6,7 +6,7 @@ x 3.  Add new todos through the server instead of locally (fetch: POST)
 4.  Edit individual todos locally
 5.  Send edited todos to the server (fetch: PUT)
 6.  Delete individual todos on the server (fetch: DELETE)
-7.  Add Tags
+7.  Add frontend tag-filtering
 ...
 
 
