@@ -1,19 +1,20 @@
-// 1. Get Navs to Show
-// 2. Create your data Variables
-// 3. Implement your goToPage function
-// 4. Display yourPageVariable at the bottom of the page 
-// 5. Hide each page div that doesn't match yourPageVariable
+// - 1. Get Navs to Show
+// - 2. Create your data Variables
+// - 3. Implement your goToPage function
+// - 4. Display yourPageVariable at the bottom of the page 
+// - 5. Hide each page div that doesn't match yourPageVariable
 
 var app = new Vue({
     el: "#app",
     data: {
         // page number variable
-
+        currentPageNumber: 1,
     },
     methods: {
         // updates page number variable
         goToPage: function (page_clicked) {
-
+            console.log("User clicked on:", page_clicked);
+            this.currentPageNumber = page_clicked;
         }
     }
 });

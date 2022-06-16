@@ -11,35 +11,39 @@
 
             <!-- 1. Color Inputs -->
             <!-- Red Input - modeled with a variable    (extra attributes: type='number' max='255' min='0') -->
-            Red: 
+            Red: <input v-model="redInput" type='number' max='255' min='0'>
             <!-- Green Input - repeat previous with new variable -->
-            Green: 
+            Green: <input v-model="greenInput" type='number' max='255' min='0'>
             <!-- Blue Input -  "                               " -->
-            Blue: 
+            Blue: <input v-model="blueInput" type='number' max='255' min='0'>
 
             <br><br>
 
             <!-- 3. Add Button -->
             <!-- Add Color Button - adds the color when clicked    (extra attributes: none) -->
-
+            <button v-on:click="addColor()">Add Color!</button>
 
             <br><br>
 
             <!-- 2. Color Preview -->
             <!-- Preview Div - displays current rgb combination 
                               using computed variable rgbString    (extra attributes: id='color-preview') -->
+            <div v-bind:style="{ backgroundColor : rgbString }" id='color-preview'></div>
 
         </div>
         <div id="palette-area">
 
             <!-- 4. Color Palette -->
             <!-- Individual Colors - loop over each colorString in your color array    (extra attributes: none) -->
+            <div v-for="colorString in colorContainer">
 
                 <!-- a. Color Display - bind the backgroundColor style to the 
                                         colorString from your loop    (extra attributes: class='palette-color') -->
-
+                <div class='palette-color' v-bind:style="{ backgroundColor : colorString }"></div>
                 <!-- b. Color String - use inline double curly braces to display the colorString    (extra attributes: class='palette-color-string') -->
-                
+                <div class='palette-color-string'>{{ colorString }}</div>
+
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>

@@ -1,8 +1,8 @@
-<!-- 1. Get Navs to Show -->
-<!-- 2. Create your data Variables -->
-<!-- 3. Implement your goToPage function -->
-<!-- 4. Display yourPageVariable at the bottom of the page  -->
-<!-- 5. Hide each page div that doesn't match yourPageVariable -->
+<!-- - 1. Get Navs to Show -->
+<!-- - 2. Create your data Variables -->
+<!-- - 3. Implement your goToPage function -->
+<!-- - 4. Display yourPageVariable at the bottom of the page  -->
+<!-- - 5. Hide each page div that doesn't match yourPageVariable -->
 
 <!DOCTYPE html>
 <html>
@@ -15,13 +15,16 @@
 
         <nav>
             <!-- 3 Nav-button Divs - when clicked, calls goToPage(PAGE_NUMBER_HERE)    (extra attributes: class='nav-div') -->
+            <div class="nav-div" v-on:click="goToPage(1)">Page 1</div>
+            <div class="nav-div" v-on:click="goToPage(2)">Page 2</div>
+            <div class="nav-div" v-on:click="goToPage(3)">Page 3</div>
         </nav>
 
 
 
         <!-- Page Divs - only show when yourPageVariable matches page number (1, 2, 3) -->
 
-        <div class="page"> <!-- FIRST PAGE -->
+        <div class="page" v-if="currentPageNumber == 1"> <!-- FIRST PAGE -->
             <figure>
                 <img src="https://loremipsum.io/assets/images/lorem-ipsum-generator-cicero-engraving.png">
                 <figcaption><i>some dude about lorem ipsum (cicero?)</i></figcaption>
@@ -32,7 +35,7 @@
             Nec ultrices dui sapien eget mi. Neque sodales ut etiam sit amet. Ac turpis egestas maecenas pharetra convallis posuere morbi leo. Elementum facilisis leo vel fringilla est. Vitae proin sagittis nisl rhoncus mattis. Sed pulvinar proin gravida hendrerit lectus. Turpis egestas sed tempus urna et pharetra pharetra massa. Quam id leo in vitae turpis massa sed elementum. Ipsum suspendisse ultrices gravida dictum fusce ut placerat. Ac placerat vestibulum lectus mauris ultrices eros in cursus turpis. Condimentum id venenatis a condimentum vitae. Blandit libero volutpat sed cras ornare arcu. Convallis convallis tellus id interdum velit. Arcu dui vivamus arcu felis bibendum ut tristique et.
         </div>
 
-        <div class="page"> <!-- SECOND PAGE -->
+        <div class="page" v-else-if="currentPageNumber == 2"> <!-- SECOND PAGE -->
             Vivamus arcu felis bibendum ut tristique et egestas quis ipsum. Pharetra pharetra massa massa ultricies mi quis. Semper eget duis at tellus at urna condimentum. Faucibus interdum posuere lorem ipsum dolor sit amet consectetur adipiscing. Blandit volutpat maecenas volutpat blandit aliquam etiam erat. Gravida in fermentum et sollicitudin ac. Ante in nibh mauris cursus mattis molestie a iaculis at. Dignissim convallis aenean et tortor at risus viverra adipiscing. Nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur. Neque convallis a cras semper auctor neque vitae tempus. Dis parturient montes nascetur ridiculus mus mauris vitae. Ut aliquam purus sit amet luctus venenatis lectus.
             <br><br>
             <figure>
@@ -43,7 +46,7 @@
             Lorem ipsum dolor sit amet consectetur adipiscing elit duis. Aenean euismod elementum nisi quis eleifend quam adipiscing. Turpis massa tincidunt dui ut ornare lectus sit amet. Ut pharetra sit amet aliquam id diam maecenas ultricies. Morbi leo urna molestie at elementum eu. Integer vitae justo eget magna fermentum iaculis eu non diam. Iaculis at erat pellentesque adipiscing commodo. Eget magna fermentum iaculis eu non diam phasellus. Nec feugiat in fermentum posuere urna nec. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Eget sit amet tellus cras. Ultricies lacus sed turpis tincidunt id aliquet risus feugiat. Bibendum neque egestas congue quisque egestas. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra.
         </div>
 
-        <div class="page"> <!-- THIRD PAGE -->
+        <div class="page" v-else-if="currentPageNumber == 3"> <!-- THIRD PAGE -->
             Pharetra magna ac placerat vestibulum. Varius morbi enim nunc faucibus a. Mattis molestie a iaculis at erat pellentesque adipiscing commodo elit. At urna condimentum mattis pellentesque id nibh tortor id. Etiam dignissim diam quis enim. Tortor vitae purus faucibus ornare suspendisse sed. Egestas congue quisque egestas diam in arcu. Neque sodales ut etiam sit amet nisl purus. Rhoncus urna neque viverra justo. Velit ut tortor pretium viverra suspendisse. Quisque sagittis purus sit amet volutpat consequat mauris nunc congue. Aenean sed adipiscing diam donec adipiscing tristique risus nec. Cursus metus aliquam eleifend mi. Vel quam elementum pulvinar etiam non. Aliquet bibendum enim facilisis gravida. Eget lorem dolor sed viverra ipsum nunc aliquet bibendum enim. Cras pulvinar mattis nunc sed blandit libero volutpat.
             <br><br>
             <figure>
@@ -55,7 +58,7 @@
 
 
         <!-- Div displaying page number - replace placeholder PAGE_NUMBER with your page number variable -->
-        <div class="page-number">PAGE_NUMBER</div>
+        <div class="page-number">{{ currentPageNumber }}</div>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
