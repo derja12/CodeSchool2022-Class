@@ -1,0 +1,5 @@
+Agenda:
+1. Warmups:
+    a. Search Filter
+2. Finish Todo App
+3. Catch up / Finish anything from the week

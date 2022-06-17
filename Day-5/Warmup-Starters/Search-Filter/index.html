@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <title>Search Filtering</title>
+</head>
+<body>
+    <h1>Search Filtering</h1>
+    <h2>Edgar Allen Poe</h2>
+    <div id="app">
+
+        <div id="search-bar">
+            <!-- input for search -->
+            <input v-model="searchInput" placeholder="Search">
+        </div>
+
+        <div id="list-area">
+            <!-- div for each article in your filtered(computed) array -->
+            <div v-for="poem in filteredPoems">
+                <!-- div containing inline poem title (attributes: class="poem-title")-->
+                <div class="poem-title">{{ poem.title }}</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="app.js"></script>
+</html>

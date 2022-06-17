@@ -1,0 +1,55 @@
+:root {
+    --mint: #B4EDD2;
+    --coolGray: #8D94BA;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body h1 {
+    grid-column: 1 / -1;
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+body h2 {
+    margin-top: 0;
+}
+
+body #app {
+    grid-column: 2 / 3;
+    width: 60vw;
+    min-width: 400px;
+    margin: auto;
+    height: calc(100vh - 8rem);
+    background-color: var(--mint);
+}
+
+body #app #search-bar {
+    padding: 1rem;
+    height: 10%;
+    background-color: var(--coolGray);
+}
+
+body #app #list-area {
+    width: inherit;
+    height: 90%;
+    overflow-y: scroll;
+    text-align: left;
+}
+
+body #app #list-area div .poem-title {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-left: 1rem;
+    border: 1px solid rgba(0,0,0,.1);
+}

@@ -1,0 +1,127 @@
+[v-cloak] { 
+    display: none 
+}
+
+.green-button {
+    background-color: rgb(105, 186, 93);
+    color: white;
+    border: none;
+    padding: .3rem;
+    font-size: .8rem;
+    transition: .5s;
+} .green-button:hover {
+    background-color: rgb(122, 196, 111);
+    cursor: pointer;
+} .green-button:disabled {
+    background-color: rgb(187, 230, 180);
+    color: gray;
+    cursor: inherit;
+} 
+.red-button {
+    background-color: rgb(174, 38, 38);
+    color: white;
+    border: none;
+    padding: .3rem;
+    font-size: .8rem;
+    transition: .5s;
+} .red-button:hover {
+    background-color: rgb(190, 78, 78);
+    cursor: pointer;
+} .red-button:disabled {
+    background-color: rgb(189, 100, 100);
+    color: gray;
+    cursor: inherit;
+} 
+
+body {
+    box-sizing: border-box;
+    font-family: 'Lobster';
+}
+
+body #app {
+    background-color: lightgray;
+    padding-bottom: 1rem;
+    width: 70vw;
+    margin: auto;
+}
+
+body #app h1 {
+    background-color: rgb(180, 255, 255);
+    text-align: center;
+    padding: 2rem;
+}
+
+body #app #input-area {
+    padding: 1rem;
+}
+
+body #app #input-area .tag-area {
+    display: inline;
+}
+body #app #input-area .tag-area input {
+    margin-left: 1rem;
+}
+
+body #app #list-area {
+    height: 45vh;
+    margin: 1rem;
+    overflow-y: scroll;
+    background-color: rgb(185, 185, 185);
+}
+
+body #app #list-area .todo {
+    margin: 1rem;
+    padding: 1rem;
+    color: black;
+    font-size: 1rem;
+    border-left: 8px solid rgb(105, 186, 93);
+    background-color: rgb(199, 255, 190);
+    height: fit-content;
+    transition: .5s;
+} body #app #list-area .new-todo {
+    border-left: 8px solid rgb(159, 56, 159);
+    background-color: rgb(193, 101, 193);
+}
+
+body #app #list-area .todo .todo-name {
+    font-size: 1.8rem;
+    display: inline;
+    font-family: inherit;
+}
+
+body #app #list-area .todo .todo-deadline {
+    font-weight: bold;
+    display: inline;
+    font-family: inherit;
+}
+
+body #app #list-area .todo .todo-desc {
+    display: block;
+    font-family: inherit;
+}
+
+body #app #list-area .todo .todo-tags {
+    display: inline;
+    font-family: inherit;
+} .todo-tags p {
+    display: inline;
+}
+
+body #app #list-area .todo .button-area {
+    float: right;
+    text-align: right;
+}
+
+body #app #list-area .todo .button-area button {
+    display: block;
+    margin-left: auto;
+    margin-bottom: 0.5rem;
+}
+
+body #app .todo input {
+    margin: 0rem;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
