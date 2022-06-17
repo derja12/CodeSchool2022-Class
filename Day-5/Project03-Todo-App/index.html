@@ -25,30 +25,38 @@
             <div class="todo" v-for="(todo, index) in todos" v-bind:class="{ 'new-todo' : todo._id == newTodoId }">
                 <!-- Name stuff -->
                 <span class="todo-name" v-bind:class="{ strikethrough : todo.done }" v-if="editingIndex != index">{{ todo.name }}</span>
-                <input class="todo-name" placeholder="Name" v-model="todo.name" v-if="editingIndex == index">
+                <input class="todo-name" placeholder="Name" v-model="editingTodoCopy.name" v-if="editingIndex == index">
                 <br>
 
                 <!-- Description stuff -->
                 Description: <span v-if="editingIndex != index">{{ todo.description }}</span>
-                <input placeholder="Description" v-model="todo.description" v-if="editingIndex == index">
+                <input placeholder="Description" v-model="editingTodoCopy.description" v-if="editingIndex == index">
                 <br>
 
                 <!-- Done stuff -->
                 Done: <span v-if="editingIndex != index">{{ todo.done }}</span>
-                <input v-if="editingIndex == index" type="check" v-model="todo.done">
+                <input v-if="editingIndex == index" type="checkbox" v-model="editingTodoCopy.done">
                 <br>
 
                 <!-- Deadline stuff -->
                 Deadline: <span v-if="editingIndex != index">{{ todo.deadline }}</span>
-                <input v-if="editingIndex == index" type="date" v-model="todo.deadline">
+                <input v-if="editingIndex == index" type="date" v-model="editingTodoCopy.deadline">
                 <br>
 
                 <!-- Tag stuff -->
-                Tags: {{ todo.tags }}<br>
+                <div v-if="editingIndex != index">Tags: {{ todo.tags }}</div>
+                <div v-if="editingIndex == index"> 
+                    <div class="tag-area" v-for="(tag, index) in usableTags">
+                        <input type="checkbox" v-model="editingTags[index]"> {{ tag }} 
+                    </div>
+                </div>
 
                 <!-- Buttons -->
-                <button class="green-button" v-if="editingIndex != index" v-on:click="editTodo(index)">Edit Todo</button>
-                <button class="red-button" v-if="editingIndex == index" v-on:click="editTodo(-1)">Submit</button>
+                <button class="green-button" v-if="editingIndex != index" v-on:click="editTodo(todo, index)">Edit Todo</button>
+                <button class="red-button" v-if="editingIndex == index" v-on:click="editTodo({}, -1)">Cancel</button>
+                <!-- Add a submit button that updates the old todo w/ the edit version -->
+                <button class="green-button" v-if="editingIndex == index" v-on:click="putTodo(todo)">Submit</button>
+                <button class="red-button" v-if="editingIndex == index" v-on:click="deleteTodo(todo)">Cancel</button>
             </div>
             
         </div>

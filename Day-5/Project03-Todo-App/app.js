@@ -16,6 +16,9 @@ var app = new Vue({
         newTodoId: "",
 
         editingIndex: -1,
+        // copy of todo for editing
+        editingTodoCopy: {},
+        editingTags: [], // ex. [true, false, false, true, ...]
     },
     methods: {
         addTodo: function () {
@@ -50,8 +53,19 @@ var app = new Vue({
             this.tagsInput = {};
         },
 
-        editTodo: function (todo_index) {
+        editTodo: function (todo_object, todo_index) {
             this.editingIndex = todo_index;
+            // get a copy of the todo
+            this.editingTodoCopy = {...todo_object};
+
+            // does the todo_object have .tags?
+            if (Object.keys(todo_object).includes('tags')) {
+                // get the list of tags already checked []
+                this.editingTags = [];
+                this.usableTags.forEach(tag => {
+                    this.editingTags.push(todo_object.tags.includes(tag));
+                });
+            }
         },
 
         // ============== FETCH FUNCTIONS ==============
@@ -84,6 +98,51 @@ var app = new Vue({
                         todo.deadline = todo.deadline.split("T")[0];
                     })
                     
+                });
+            });
+        },
+
+        // PUT todo
+        putTodo: function (todo_object) {
+            // Get list of tag strings
+            let listOfTags = [];
+            this.usableTags.forEach((tag, index) => {
+                if (this.editingTags[index]) {
+                    listOfTags.push(tag);
+                }
+            });
+
+            // update todoCopy.tags to list of strings
+            //      ex. ["school", "home", ...]
+            this.editingTodoCopy.tags = [...listOfTags];
+
+            // PUT request
+            fetch(url + "/todo/" + todo_object._id, {
+                method: "PUT",
+                body: JSON.stringify(this.editingTodoCopy),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            }).then(response => {
+                response.json().then((updated_todo) => {
+                    // created_todo._id -> newly posted todo
+                    this.newTodoId = updated_todo._id;
+                    this.getTodos();
+                });
+            });
+
+            // clear editingTodo
+            this.editTodo({}, -1);
+        },
+
+        // DELETE todo
+        deleteTodo: function (todo_object) {
+            fetch(url + "/todo/" + todo_object._id, {
+                method: "DELETE",
+            }).then(response => {
+                response.json().then(deleted_todo => {
+                    console.log(deleted_todo);
+                    this.getTodos();
                 });
             });
         }
