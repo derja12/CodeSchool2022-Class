@@ -8,9 +8,6 @@ Vue.component('product-component', {
     </div>
     `,
     props: [],
-    data: function () {
-        return {};
-    }
 })
 
 var app = new Vue({
