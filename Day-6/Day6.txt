@@ -1,0 +1,6 @@
+Agenda:
+1. Warmups:
+    a. Pulling API Data
+    b. Pulling API Data - With Components
+2. Start Webstore App
+    - New Git Repository
