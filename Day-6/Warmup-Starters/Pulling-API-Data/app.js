@@ -1,7 +1,31 @@
 const API_URL = "https://fakestoreapi.com";
 
 var app = new Vue({
+    el: "#app",
+    data: {
+        // is vue hooked up? 
+        //   vvv test vvv
+        // message: "hello world"
 
+        list: []
+    },
+    created: async function () {
+        // new way
+        let response = await fetch(API_URL + "/products");
+        let data = await response.json();
+        this.list = data;
+
+
+
+        
+        // old way
+        fetch(API_URL + "/products").then(response => {
+            response.json().then(data => {
+                console.log(data);
+                this.list = data;
+            });
+        });
+    }
 });
 
 
