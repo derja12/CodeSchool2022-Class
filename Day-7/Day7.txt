@@ -1,9 +1,9 @@
 !!! SciTools lunch this week is now Wednesday !!!
 
 Agenda:
-0. Update Git repos (add, commit, and push) 
 1. Warmups:
     a. Address-Book-Components
     b. Fortune-Sorter
-2. Webstore App
+2. Update Git repos (add, commit, and push)
+3. Webstore App
     - Day 2 Features - pick and choose

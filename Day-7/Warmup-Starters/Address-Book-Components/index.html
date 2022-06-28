@@ -7,7 +7,19 @@
 <body>
     <div id="app">
         <h1>Address Book with Components</h1>
+
+        <input v-model="name" placeholder="Name">
+        <input v-model="address" placeholder="Address">
         
+        <button v-on:click="createAddress">Create Address</button>
+
+        <custom-address 
+            v-for="(address,i) in addressList"
+            v-bind:address="address"
+            v-bind:index="i"
+            v-bind:list="addressList"
+            v-bind:key="i">
+        </custom-address>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="app.js"></script>
@@ -20,5 +32,14 @@
 2. Create Button to record new addresses
 3. Display list of addresses *but now use a Component!*
 4. Add a remove button that will remove the address from the array
+
+if you've finished the above (OPTIONAL):
+5. Only show a address if you're hovering over the name belonging to the address
+6. If a name is already in use, don't let the user add an address with that name
+7. Allow editing of addresses
+
+====================================================================
+MOVE ON TO 'Fortune Sorter' IF YOU'RE FINISHED WITH THE ADDRESS BOOK
+===================================================================
 
 -->
