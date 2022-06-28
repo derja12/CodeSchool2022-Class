@@ -3,8 +3,7 @@
 Agenda:
 0. Update Git repos (add, commit, and push) 
 1. Warmups:
-    a. Pulling API Data
-    b. Counter/Greeting Components
-2. Start Webstore App
-    - New Git Repository
-    - Display products using components
+    a. Address-Book-Components
+    b. Fortune-Sorter
+2. Webstore App
+    - Day 2 Features - pick and choose
