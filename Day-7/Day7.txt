@@ -1,0 +1,10 @@
+!!! SciTools lunch this week is now Wednesday !!!
+
+Agenda:
+0. Update Git repos (add, commit, and push) 
+1. Warmups:
+    a. Pulling API Data
+    b. Counter/Greeting Components
+2. Start Webstore App
+    - New Git Repository
+    - Display products using components
