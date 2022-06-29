@@ -3,5 +3,7 @@ Agenda:
     a. Mad Libs
 2. Update any out-of-date Git repos (add, commit, and push)
 3. Forum 
-    - Login Form (logging in with backend)
+    - New Git repo!
+    - Logging in with backend 'users' resource
+    - Hosting with Extension/Github Pages/Express
 4. SciTools Company Lunch
