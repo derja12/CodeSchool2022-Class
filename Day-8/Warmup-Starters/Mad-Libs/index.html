@@ -9,14 +9,39 @@
 <body>
     <div id="app" style="font-family: 'Coming soon', cursive;">
         <h1>Component Mad Libs</h1>
-        <pessimistic-mad-lib
-            v-bind:name="'Derek'"
-            v-bind:birthday="'August 9th'"
-            v-bind:favorite-food="'Panda Express'"
-            v-bind:favorite-number="12"
-            v-bind:favorite-movie="'Kangaroo Jack'"
-            v-bind:favorite-shopping-item="'guitars'">
-        </pessimistic-mad-lib>
+        <div v-if="page == 'inputs'" id="inputs-page">
+            <h2>Enter words to get a story</h2>
+            Name: <input v-model="nameInput"><br>
+            Birthday: <input v-model="birthdayInput"><br>
+            Favorite Food: <input v-model="favoriteFoodInput"><br>
+            Favorite Number: <input type="number" v-model="favoriteNumberInput"><br>
+            Favorite Movie: <input v-model="favoriteMovieInput"><br>
+            Favorite Shopping Item <input v-model="favoriteShoppingItemInput"><br>
+            <button v-on:click="page = 'story'">Get Story!</button>
+
+        </div>
+
+        <div v-else-if="page == 'story'" id="display-page">
+            <h2>Pessimistic Mad libs</h2>
+            <pessimistic-mad-lib
+                v-bind:name="nameInput"
+                v-bind:birthday="birthdayInput"
+                v-bind:favorite-food="favoriteFoodInput"
+                v-bind:favorite-number="favoriteNumberInput"
+                v-bind:favorite-movie="favoriteMovieInput"
+                v-bind:favorite-shopping-item="favoriteShoppingItemInput">
+            </pessimistic-mad-lib>
+
+            <h2>Optimistic Mad libs</h2>
+            <optimistic-mad-lib
+            v-bind:name="nameInput"
+            v-bind:birthday="birthdayInput"
+            v-bind:favorite-food="favoriteFoodInput"
+            v-bind:favorite-number="favoriteNumberInput"
+            v-bind:favorite-movie="favoriteMovieInput"
+            v-bind:favorite-shopping-item="favoriteShoppingItemInput">
+            </optimistic-mad-lib>
+        </div>
 
         <!-- Insert your own mad-lib component here -->
 
