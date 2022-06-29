@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap" rel="stylesheet">
+    <title>Component Mad Libs</title>
+</head>
+<body>
+    <div id="app" style="font-family: 'Coming soon', cursive;">
+        <h1>Component Mad Libs</h1>
+        <pessimistic-mad-lib
+            v-bind:name="'Derek'"
+            v-bind:birthday="'August 9th'"
+            v-bind:favorite-food="'Panda Express'"
+            v-bind:favorite-number="12"
+            v-bind:favorite-movie="'Kangaroo Jack'"
+            v-bind:favorite-shopping-item="'guitars'">
+        </pessimistic-mad-lib>
+
+        <!-- Insert your own mad-lib component here -->
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
+<!-- 
+
+Mad Lib Instructions
+
+1. Add a second pessimistic-mad-lib element to your html, and fill in the props with your own values
+
+2. Create a new mad lib component (create a new story) that contains at least 4 string props and 1 number prop
+
+3. Add your-new-mad-lib element to your html and fill in the props with values
+
+4. Create inputs and have the webpage user enter their own mad-lib words
+    - Model each input value using your Vue Instance's data variables
+    - Add a button that, when clicked, shows a mad-lib element using their words
+    - (You should put the story on a 'page' separate from the inputs & button)
+
+===========================================================================================================
+
+If you're finished with the above:
+
+5. Create a reset button that lets the user enter new values
+
+6. Let the user select which story they want to provide words for
+    - (this may require a different number of inputs, depending on the story)
+
+ -->

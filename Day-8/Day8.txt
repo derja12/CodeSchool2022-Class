@@ -1,0 +1,7 @@
+Agenda:
+1. Warmups:
+    a. Mad Libs
+2. Update any out-of-date Git repos (add, commit, and push)
+3. Forum 
+    - Login Form (logging in with backend)
+4. SciTools Company Lunch
