@@ -1,7 +1,9 @@
 Agenda:
 1. Warmups:
     a. Multiple Choice Quiz
+
 2. Update any out-of-date Git repos (add, commit, and push)
+
 3. Forum 
     a. Threads!
         i. w/ Postman
