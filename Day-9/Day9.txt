@@ -1,0 +1,14 @@
+Agenda:
+1. Warmups:
+    a. Multiple Choice Quiz
+2. Update any out-of-date Git repos (add, commit, and push)
+3. Forum 
+    a. Threads!
+        i. w/ Postman
+        ii. w/ Frontend
+        
+    b. Posts (AKA comments)!
+        i. w/ Postman
+        ii. w/ Frontend
+
+    c. Hosting with Github Pages
