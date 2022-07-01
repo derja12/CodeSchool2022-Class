@@ -1,0 +1,16 @@
+Agenda:
+1. Warmups:
+    a. Typing Test
+
+2. Update any out-of-date Git repos (add, commit, and push)
+
+3. Forum 
+    a. Display List of Threads
+    b. Display individual Threads
+    c. Display Posts associated with individual Threads
+    d. Create New Thread
+    e. Create New Post
+    f. Delete Thread
+    g. Delete Post
+
+    h. Host with Github Pages (or another hosting service)
