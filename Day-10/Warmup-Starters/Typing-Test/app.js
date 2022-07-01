@@ -13,7 +13,7 @@ var app = new Vue({
         },
         getRandomSentence: function () {
         },
-        calculateWordsPerSecond: function () {
+        calculateTotalTime: function () {
         },
         resetTest: function () {
         },
@@ -26,7 +26,7 @@ var app = new Vue({
         finishedTyping: function () {
             // you probably wanna use your variable here in place of these awful ones
             if (this.SENTENCE_TO_BE_TYPED == this.SENTENCE_USER_IS_TYPING) {
-                this.calculateWordsPerSecond();
+                this.calculateTotalTime();
                 return true;
             } else {
                 return false;
