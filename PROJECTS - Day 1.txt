@@ -1,0 +1,10 @@
+Agenda:
+0. Update any out-of-date Git repos!!! (add, commit, and push)
+1. Overview of different project pieces
+    a. Frontend
+    b. Frontend pt. 2
+    c. Backend
+    d. Backend pt. 2
+2. Vuetify interest?
+    a. If so, warmup or lecture?
+3. Split off into groups
