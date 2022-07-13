@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Address Book</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Vue Address Book</h1>
+        <input v-model="inputName" placeholder="Enter Name"><br>
+        <input v-model="inputAddress" placeholder="Enter Address"><br>
+        
+        <button v-on:click="recordAddress()">Record Address</button>
+    
+        <div v-for="address in addressList">
+            <h3>{{ address.name }}</h3>
+            {{ address.address }}
+        </div>
+    </div> 
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

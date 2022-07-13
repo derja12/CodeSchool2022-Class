@@ -1,0 +1,4 @@
+Agenda:
+1. Vuetify introduction
+    a. Learn Documentation!!!
+2. Split off into groups
