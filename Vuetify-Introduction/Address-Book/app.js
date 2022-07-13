@@ -2,6 +2,7 @@
 
 var app = new Vue({
     el: "#app",
+    vuetify: new Vuetify(),
     data: {
         inputName: "",
         inputAddress: "",
@@ -18,6 +19,10 @@ var app = new Vue({
             this.addressList.push(newAddress);
             this.inputName = "";
             this.inputAddress = "";
+        },
+        sayHello: function () {
+            console.log("hello");
+            alert("hello");
         }
     }
 })
